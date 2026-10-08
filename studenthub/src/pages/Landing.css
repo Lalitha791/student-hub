@@ -1,0 +1,166 @@
+landing.css
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.landing-page {
+  min-height: 100vh;
+
+  background: linear-gradient(
+    135deg,
+    #f5f7ff,
+    #eef2ff,
+    #f5f3ff
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Background balls */
+
+.ball {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  opacity: 0.65;
+}
+
+
+/* Blue ball */
+
+.ball-one {
+  width: 280px;
+  height: 280px;
+
+  background: #a5b4fc;
+
+  top: -100px;
+  left: -80px;
+}
+
+
+/* Purple ball */
+
+.ball-two {
+  width: 230px;
+  height: 230px;
+
+  background: #c4b5fd;
+
+  right: -70px;
+  bottom: -60px;
+}
+
+
+/* Cyan ball */
+
+.ball-three {
+  width: 140px;
+  height: 140px;
+
+  background: #67e8f9;
+
+  right: 18%;
+  top: 12%;
+}
+
+
+/* Pink ball */
+
+.ball-four {
+  width: 100px;
+  height: 100px;
+
+  background: #f9a8d4;
+
+  left: 15%;
+  bottom: 15%;
+}
+
+
+/* Main content */
+
+.content {
+  text-align: center;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Welcome */
+
+.welcome {
+  font-size: 14px;
+
+  font-weight: bold;
+
+  letter-spacing: 4px;
+
+  color: #6366f1;
+
+  margin-bottom: 15px;
+}
+
+
+/* Heading */
+
+.content h1 {
+  font-size: 70px;
+
+  color: #1e293b;
+
+  margin-bottom: 20px;
+}
+
+
+/* Student Hub color */
+
+.content h1 span {
+  color: #6366f1;
+}
+
+
+/* Description */
+
+.description {
+  font-size: 20px;
+
+  color: #64748b;
+
+  margin-bottom: 35px;
+}
+
+
+/* Button */
+
+.content button {
+  padding: 15px 40px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #6366f1;
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+}

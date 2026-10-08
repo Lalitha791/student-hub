@@ -1,0 +1,539 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.profile-page {
+  min-height: 100vh;
+
+  padding: 45px 20px;
+
+  background: linear-gradient(
+    135deg,
+    #f5f7ff,
+    #eef2ff,
+    #f5f3ff
+  );
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* Background circles */
+
+.profile-page::before {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  background: #a5b4fc;
+
+  border-radius: 50%;
+
+  top: -100px;
+  right: -80px;
+
+  opacity: 0.45;
+
+  filter: blur(2px);
+}
+
+
+.profile-page::after {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  background: #f9a8d4;
+
+  border-radius: 50%;
+
+  bottom: -80px;
+  left: -70px;
+
+  opacity: 0.4;
+
+  filter: blur(2px);
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.profile-container {
+  width: 100%;
+
+  max-width: 1000px;
+
+  margin: auto;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.profile-container h1 {
+  text-align: center;
+
+  font-size: 42px;
+
+  color: #1e293b;
+
+  margin: 0 0 8px;
+}
+
+
+.profile-subtitle {
+  text-align: center;
+
+  color: #64748b;
+
+  margin-bottom: 30px;
+
+  font-size: 16px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.student-form {
+  width: 470px;
+
+  max-width: 100%;
+
+  margin: 0 auto 45px;
+
+  padding: 28px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border: 1px solid rgba(165, 180, 252, 0.5);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 12px 35px
+    rgba(99, 102, 241, 0.12);
+}
+
+
+/* Form row */
+
+.form-group {
+  display: flex;
+
+  align-items: flex-start;
+
+  margin-bottom: 20px;
+}
+
+
+/* Label */
+
+.form-group label {
+  width: 75px;
+
+  padding-top: 11px;
+
+  color: #334155;
+
+  font-weight: 600;
+
+  font-size: 14px;
+}
+
+
+/* Input section */
+
+.input-section {
+  flex: 1;
+}
+
+
+/* Input */
+
+.form-group input {
+  width: 100%;
+
+  padding: 11px 13px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  font-size: 14px;
+
+  color: #334155;
+
+  background: white;
+
+  transition: 0.2s;
+}
+
+
+.form-group input:focus {
+  border-color: #6366f1;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(99, 102, 241, 0.12);
+}
+
+
+.form-group input::placeholder {
+  color: #94a3b8;
+}
+
+
+/* Error */
+
+.error-message {
+  display: block;
+
+  color: #ef4444;
+
+  font-size: 12px;
+
+  margin-top: 5px;
+}
+
+
+/* =========================
+   FORM BUTTONS
+========================= */
+
+.form-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+
+.form-buttons button {
+  padding: 11px 22px;
+
+  border: none;
+
+  border-radius: 25px;
+
+  background: #6366f1;
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 18px
+    rgba(99, 102, 241, 0.25);
+
+  transition: 0.2s;
+}
+
+
+.form-buttons button:hover {
+  background: #4f46e5;
+
+  transform: translateY(-1px);
+}
+
+
+.form-buttons button:disabled {
+  background: #cbd5e1;
+
+  box-shadow: none;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* Update button */
+
+.form-buttons .update-button {
+  background: #8b5cf6;
+}
+
+
+.form-buttons .update-button:hover {
+  background: #7c3aed;
+}
+
+
+/* =========================
+   STUDENT SECTION
+========================= */
+
+.student-section {
+  margin-top: 10px;
+}
+
+
+/* Student heading */
+
+.student-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+
+.student-heading h2 {
+  color: #1e293b;
+
+  margin: 0;
+
+  font-size: 24px;
+}
+
+
+/* Count */
+
+.student-count {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 28px;
+
+  height: 28px;
+
+  border-radius: 50%;
+
+  background: #6366f1;
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  box-shadow:
+    0 5px 12px
+    rgba(99, 102, 241, 0.25);
+}
+
+
+/* =========================
+   STUDENT CARDS
+========================= */
+
+.student-cards {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+}
+
+
+/* Individual card */
+
+.student-card {
+  background: rgba(255, 255, 255, 0.92);
+
+  padding: 18px;
+
+  min-height: 190px;
+
+  border-radius: 16px;
+
+  border: 1px solid
+    rgba(165, 180, 252, 0.45);
+
+  box-shadow:
+    0 8px 22px
+    rgba(99, 102, 241, 0.1);
+
+  transition: 0.25s;
+}
+
+
+.student-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 28px
+    rgba(99, 102, 241, 0.15);
+}
+
+
+/* Card number */
+
+.card-number {
+  color: #6366f1;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  margin-bottom: 7px;
+}
+
+
+/* Student name */
+
+.student-card h3 {
+  color: #1e293b;
+
+  margin: 0 0 12px;
+
+  font-size: 18px;
+
+  word-break: break-word;
+}
+
+
+/* Student information */
+
+.student-info p {
+  color: #64748b;
+
+  font-size: 12px;
+
+  margin: 7px 0;
+
+  word-break: break-word;
+
+  line-height: 1.4;
+}
+
+
+.student-info strong {
+  color: #475569;
+}
+
+
+/* =========================
+   CARD BUTTONS
+========================= */
+
+.card-buttons {
+  display: flex;
+
+  gap: 6px;
+
+  margin-top: 15px;
+}
+
+
+.card-buttons button {
+  padding: 7px 11px;
+
+  border: none;
+
+  border-radius: 18px;
+
+  background: #6366f1;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+
+.card-buttons button:hover {
+  background: #4f46e5;
+}
+
+
+/* Delete button */
+
+.card-buttons .delete-button {
+  background: #f472b6;
+}
+
+
+.card-buttons .delete-button:hover {
+  background: #ec4899;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .student-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 550px) {
+
+  .profile-page {
+    padding: 30px 15px;
+  }
+
+
+  .profile-container h1 {
+    font-size: 34px;
+  }
+
+
+  .student-form {
+    width: 100%;
+
+    padding: 22px;
+  }
+
+
+  .form-group label {
+    width: 70px;
+  }
+
+
+  .student-cards {
+    grid-template-columns: 1fr;
+  }
+
+}
